@@ -27,9 +27,7 @@ public class DataGenerator {
 
     public static String generateName(Faker faker) {
         String name = faker.name().lastName() + " " + faker.name().firstName();
-
-        // Добавила это правило, потому что форма ругается на букву ё, считая ее невалидным символом (Алёна)
-        return name.replace("ё", "е").replace("Ё", "Е");
+        return faker.name().lastName() + " " + faker.name().firstName();
     }
 
 
@@ -60,4 +58,3 @@ public class DataGenerator {
         String phone;
     }
 }
-
